@@ -36,9 +36,17 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: var(--line-height);
   color: var(--clr-text-default);
-  font-weight: 300;
+  font-weight: normal;
   min-height: 100vh;
   padding: 6rem 2rem;
+  text-align: center;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: var(--clr-divider);
+  margin: 3rem -2rem 0 -2rem;
 }
 
 img {
@@ -61,13 +69,13 @@ img {
   width: 10rem;
   height: 10rem;
   filter: drop-shadow(0 0 5rem rgba(255, 255, 255, 0.2));
-  /* animation: pulse 2s infinite alternate; */
+  /* animation: pulse 2s infinite alternate ease-in-out; */
 }
 
 h1 {
   margin-top: 2rem;
   font-size: 4rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.2;
 }
 
@@ -76,6 +84,7 @@ h2 {
   font-weight: 300;
   max-width: 55ch;
   margin: 1rem auto 0 auto;
+  text-align: center;
 }
 
 h3 {
@@ -155,7 +164,15 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5em;
+  gap: 3em;
+  margin: 3rem auto 0 auto;
+  max-width: 120rem;
+}
+
+.how-does-it-work {
+  margin-top: 2rem;
+  font-size: 2.4rem;
+  font-weight: 400;
 }
 
 .promo-wrapper > * {
@@ -165,10 +182,6 @@ h3 {
 @media (max-width: 800px) {
   .promo-wrapper {
     flex-direction: column;
-  }
-
-  .promo-wrapper > * {
-    align-self: auto;
   }
 }
 
@@ -180,22 +193,32 @@ h3 {
 
 .promo-wrapper > *:nth-child(2) img {
   box-shadow: none;
-  width: 10rem;
 }
 
 .promo-wrapper img {
-  width: 40rem;
   box-shadow: var(--box-shadow);
   margin-top: 2rem;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 
-@keyframes pulse {
+/* @keyframes pulse {
   0% {
     filter: drop-shadow(0 0 10rem rgba(255, 255, 255, 0));
   }
 
   100% {
     filter: drop-shadow(0 0 5rem rgba(255, 255, 255, 0.5));
+  }
+} */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 

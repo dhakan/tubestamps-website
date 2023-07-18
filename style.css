@@ -104,9 +104,10 @@ h3 {
 }
 
 .install-wrapper {
-  margin-top: 3.2rem;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3.2rem;
   gap: 3em;
 }
 

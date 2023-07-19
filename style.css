@@ -113,6 +113,39 @@ h3 {
   text-align: center;
 }
 
+.reviews {
+  margin-top: 3rem;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+  z-index: -1;
+}
+
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.reviews svg {
+  width: 4rem;
+  height: 4rem;
+  fill: white;
+}
+
+.number-of-reviews {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-left: 0.5rem;
+}
+
+small {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-top: 0.5rem;
+  display: block;
+}
+
 .install-wrapper {
   display: flex;
   justify-content: center;

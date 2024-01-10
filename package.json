@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && copyfiles \"terms.html\" ./dist && copyfiles \"privacy.html\" ./dist",
     "preview": "vite preview"
   },
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "vite": "^4.4.0"
   }
 }

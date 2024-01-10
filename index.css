@@ -1,45 +1,7 @@
-:root {
-  /* Colors */
-  --clr-primary: #cd0101;
-  --clr-bg: #191819;
-  --clr-bg: linear-gradient(180deg, #191819 0%, #454545 100%);
-  --clr-bg-secondary: #202120;
-  --clr-placeholder: #888888;
-  --clr-divider: #313031;
-  --clr-tooltip: #191c19;
-  --clr-link: #3ea7fe;
-  --clr-icon-default: white;
-  --clr-text-default: white;
-  --clr-bg-hover: rgb(63, 63, 63);
-
-  /* Fonts */
-  --line-height: 1.5;
-
-  /* Misc */
-  --box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 10px;
-
-  --default-animation-duration: 150ms;
-}
-
-html {
-  font-size: 62.5%;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-body {
-  background: var(--clr-bg);
-  font-family: "Roboto", sans-serif;
-  line-height: var(--line-height);
-  color: var(--clr-text-default);
-  font-weight: normal;
-  min-height: 100vh;
-  padding: 12rem 2rem;
-  text-align: center;
 }
 
 hr {
@@ -78,6 +40,8 @@ h1 {
   font-size: 7.2rem;
   font-weight: 500;
   line-height: 1.2;
+  font-size: 7.2rem;
+  line-height: 1.2;
 
   opacity: 0;
   animation: fadeIn 1s ease forwards;
@@ -90,6 +54,7 @@ h2 {
   max-width: 50ch;
   margin: 0.5em auto 0 auto;
   text-align: center;
+  font-size: 3rem;
 
   opacity: 0;
   animation: fadeIn 1s ease forwards;
@@ -337,4 +302,26 @@ small {
     opacity: 1;
     transform: scale(1) translateY(0);
   }
+}
+
+footer {
+  margin-top: 4rem;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 2s;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  transition: all var(--default-animation-duration);
+}
+
+.link:hover {
+  transform: scale(1.1);
+}
+
+.link:active {
+  transform: scale(1.05);
 }
